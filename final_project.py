@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on November 13, 2020, at 08:42
+    on November 13, 2020, at 11:50
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -93,6 +93,13 @@ instrText = visual.TextStim(win=win, name='instrText',
 
 # Initialize components for Routine "fixation"
 fixationClock = core.Clock()
+fixationResp = visual.TextStim(win=win, name='fixationResp',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # Initialize components for Routine "flanker"
 flankerClock = core.Clock()
@@ -160,7 +167,6 @@ image8 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
-print(identity)
 key_resp = keyboard.Keyboard()
 
 # Initialize components for Routine "breakScr"
@@ -285,7 +291,7 @@ thisExp.addData('instrText.stopped', instrText.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-blocks = data.TrialHandler(nReps=5, method='sequential', 
+blocks = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('blocks.xlsx'),
     seed=None, name='blocks')
@@ -324,9 +330,10 @@ for thisBlock in blocks:
         
         # ------Prepare to start Routine "fixation"-------
         continueRoutine = True
+        routineTimer.add(0.500000)
         # update component parameters for each repeat
         # keep track of which components have finished
-        fixationComponents = []
+        fixationComponents = [fixationResp]
         for thisComponent in fixationComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -341,13 +348,30 @@ for thisBlock in blocks:
         frameN = -1
         
         # -------Run Routine "fixation"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = fixationClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=fixationClock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *fixationResp* updates
+            if fixationResp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                fixationResp.frameNStart = frameN  # exact frame index
+                fixationResp.tStart = t  # local t and not account for scr refresh
+                fixationResp.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(fixationResp, 'tStartRefresh')  # time at next scr refresh
+                fixationResp.setAutoDraw(True)
+            if fixationResp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > fixationResp.tStartRefresh + 0.5-frameTolerance:
+                    # keep track of stop time/frame for later
+                    fixationResp.tStop = t  # not accounting for scr refresh
+                    fixationResp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(fixationResp, 'tStopRefresh')  # time at next scr refresh
+                    fixationResp.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -370,8 +394,8 @@ for thisBlock in blocks:
         for thisComponent in fixationComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        # the Routine "fixation" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
+        trials.addData('fixationResp.started', fixationResp.tStartRefresh)
+        trials.addData('fixationResp.stopped', fixationResp.tStopRefresh)
         
         # ------Prepare to start Routine "flanker"-------
         continueRoutine = True
@@ -655,7 +679,7 @@ for thisBlock in blocks:
     blocks.addData('breakResp.stopped', breakResp.tStopRefresh)
     # the Routine "breakScr" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
-# completed 5 repeats of 'blocks'
+# completed 1 repeats of 'blocks'
 
 
 # ------Prepare to start Routine "goodbye"-------
