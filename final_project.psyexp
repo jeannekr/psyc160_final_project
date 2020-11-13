@@ -237,6 +237,23 @@
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="breakScr">
       <TextComponent name="breakText">
@@ -368,12 +385,12 @@
     </LoopInitiator>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('congruency', 'congruent'), ('distractor', 'face'), ('load', 2), ('identity', 'pop')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'face'), ('load', 2), ('identity', 'pop')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'inv'), ('load', 2), ('identity', 'pop')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'inv'), ('load', 2), ('identity', 'pop')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'face'), ('load', 2), ('identity', 'pol')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'face'), ('load', 2), ('identity', 'pol')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'inv'), ('load', 2), ('identity', 'pol')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'inv'), ('load', 2), ('identity', 'pol')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'face'), ('load', 5), ('identity', 'pop')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'face'), ('load', 5), ('identity', 'pop')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'inv'), ('load', 5), ('identity', 'pop')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'inv'), ('load', 5), ('identity', 'pop')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'face'), ('load', 5), ('identity', 'pol')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'face'), ('load', 5), ('identity', 'pol')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'inv'), ('load', 5), ('identity', 'pol')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'inv'), ('load', 5), ('identity', 'pol')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'face'), ('load', 8), ('identity', 'pop')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'face'), ('load', 8), ('identity', 'pop')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'inv'), ('load', 8), ('identity', 'pop')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'inv'), ('load', 8), ('identity', 'pop')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'face'), ('load', 8), ('identity', 'pol')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'face'), ('load', 8), ('identity', 'pol')]), OrderedDict([('congruency', 'congruent'), ('distractor', 'inv'), ('load', 8), ('identity', 'pol')]), OrderedDict([('congruency', 'incongruent'), ('distractor', 'inv'), ('load', 8), ('identity', 'pol')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trial.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="5" valType="code"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
