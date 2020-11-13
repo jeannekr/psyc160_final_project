@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.1.2">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.5">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
     <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
     <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
@@ -12,6 +13,7 @@
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
     <Param name="Save log file" updates="None" val="True" valType="bool"/>
@@ -105,7 +107,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
-    <Routine name="instructionshello">
+    <Routine name="instructions">
       <KeyboardComponent name="instrResp">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
@@ -151,7 +153,7 @@
     </Routine>
   </Routines>
   <Flow>
-    <Routine name="instructionshello"/>
+    <Routine name="instructions"/>
     <LoopInitiator loopType="TrialHandler" name="blocks">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
