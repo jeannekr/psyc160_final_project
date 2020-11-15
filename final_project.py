@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
@@ -117,9 +117,9 @@ defaultKeyboard = keyboard.Keyboard()
 instructionsClock = core.Clock()
 instrResp = keyboard.Keyboard()
 instrText = visual.TextStim(win=win, name='instrText',
-    text='On each trial, you will see a set of faces in the middle of the screen.\nOne (1) of these faces will either be a POLITICIAN or a POP STAR.\n\nIf the face is a POLITICIAN, press the F key.\nIf the face is a POP STAR, press the K key.\n\nYou will see another face to the side of the main set.\nPlease IGNORE this face as best as you can.\n\nAt all times, please:\n- Keep your eyes fixed on the cross (+) at the center of the screen.\n- Respond as quickly and accurately as you can.\n\nPress the SPACE key to begin the experiment.',
+    text='On each trial, you will see a set of faces in the middle of the screen.\nOne (1) of these faces will either be a POLITICIAN or a POP STAR.\n\nIf the face is a POLITICIAN, press the F key.\nIf the face is a POP STAR, press the K key.\n\nYou will see another face to the side of the main set.\nPlease IGNORE this face as best as you can.\n\nAt all times, please:\n- Keep your eyes fixed on the cross (+) at the center of the screen.\n- Respond as quickly and accurately as you can.\n\n\nPress the SPACE key to begin the experiment.',
     font='Arial',
-    pos=(0, 0), height=0.02, wrapWidth=None, ori=0,
+    pos=(0, 0), height=0.034, wrapWidth=None, ori=0,
     color='white', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-1.0);
