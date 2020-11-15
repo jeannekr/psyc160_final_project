@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.1.2">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.5">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -36,7 +36,7 @@
     <Routine name="trial"/>
     <Routine name="filter"/>
     <Routine name="fixation">
-      <TextComponent name="fixation1">
+      <TextComponent name="fixationResp">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -45,7 +45,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="fixation1" valType="code"/>
+        <Param name="name" updates="None" val="fixationResp" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -305,38 +305,14 @@
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <TextComponent name="text">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="text" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="" valType="extendedStr"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
       <CodeComponent name="code">
         <Param name="Before Experiment" updates="constant" val="&amp;#10;&amp;#10;&amp;#10;anchor_dict = dict([(2,0.052),(5,0.175),(8,0.33)])&amp;#10;&amp;#10;popstars = [ &amp;#10;    &quot;pop_1.png&quot;,&amp;#10;    &quot;pop_2.png&quot;, &amp;#10;    &quot;pop_3.png&quot;, &amp;#10;    &quot;pop_4.png&quot;, &amp;#10;    &quot;pop_5.png&quot;, &amp;#10;    &quot;pop_6.png&quot;, &amp;#10;] &amp;#10;&amp;#10;politicians = [&amp;#10;    &quot;pol_1.png&quot;,&amp;#10;    &quot;pol_2.png&quot;, &amp;#10;    &quot;pol_3.png&quot;, &amp;#10;    &quot;pol_4.png&quot;, &amp;#10;    &quot;pol_5.png&quot;, &amp;#10;    &quot;pol_6.png&quot;, &amp;#10;&amp;#10;]&amp;#10;&amp;#10;stock = [&amp;#10;&quot;stock_1.png&quot;,&amp;#10;&quot;stock_2.png&quot;,&amp;#10;&quot;stock_3.png&quot;,&amp;#10;&quot;stock_4.png&quot;,&amp;#10;&quot;stock_5.png&quot;,&amp;#10;&quot;stock_6.png&quot;,&amp;#10;&quot;stock_7.png&quot;&amp;#10;]" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="anchor_dict = dict([[2, 0.052], [5, 0.175], [8, 0.33]]);&amp;#10;popstars = [&quot;pop_1.png&quot;, &quot;pop_2.png&quot;, &quot;pop_3.png&quot;, &quot;pop_4.png&quot;, &quot;pop_5.png&quot;, &quot;pop_6.png&quot;];&amp;#10;politicians = [&quot;pol_1.png&quot;, &quot;pol_2.png&quot;, &quot;pol_3.png&quot;, &quot;pol_4.png&quot;, &quot;pol_5.png&quot;, &quot;pol_6.png&quot;];&amp;#10;stock = [&quot;stock_1.png&quot;, &quot;stock_2.png&quot;, &quot;stock_3.png&quot;, &quot;stock_4.png&quot;, &quot;stock_5.png&quot;, &quot;stock_6.png&quot;, &quot;stock_7.png&quot;];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="target = randint(low = 0, high = load)&amp;#10;png = &quot;&quot;&amp;#10;stockSet = set()&amp;#10;images = [&amp;#10;image1,&amp;#10;image2,&amp;#10;image3,&amp;#10;image4,&amp;#10;image5,&amp;#10;image6,&amp;#10;image7,&amp;#10;image8&amp;#10;]&amp;#10;&amp;#10;# if it is a popstar&amp;#10;if (identity == &quot;pop&quot;):&amp;#10;    index = randint(low = 0, high = len(popstars) )&amp;#10;    png = popstars[index]&amp;#10;    &amp;#10;# if it is a politician&amp;#10;else:&amp;#10;    index = randint(low = 0, high = len(politicians) )&amp;#10;    png = politicians[index]&amp;#10;&amp;#10;def pos (index):&amp;#10;    return index * 0.1&amp;#10;&amp;#10;&amp;#10;def setImage (file):&amp;#10;    return &quot;images/&quot; + file&amp;#10;    &amp;#10;anchor = anchor_dict[load]&amp;#10;&amp;#10;&amp;#10;#loops through load from 0, 1 ... load &amp;#10;for i in range(load):&amp;#10;    cImage = images[i]&amp;#10;    cImage.pos = (0, anchor - pos(i))&amp;#10;  &amp;#10;    &amp;#10;    if i == target:&amp;#10;        cImage.image = setImage(png)&amp;#10;    else:&amp;#10;        index = randint(low = 0, high = len(stock))&amp;#10;        while stock[index] in stockSet:&amp;#10;            index = randint(low = 0, high = len(stock))&amp;#10;            &amp;#10;        stockSet.add(stock[index])&amp;#10;        cImage.image = setImage(stock[index])&amp;#10;&amp;#10;        &amp;#10;if distractor == &quot;inv&quot;:&amp;#10;    distract_img.ori = 180&amp;#10;&amp;#10;def setDist (l):&amp;#10;    index = randint(low = 0, high = len(l))&amp;#10;    &amp;#10;    while l[index] == png:&amp;#10;        index = randint(low = 0, high = len(l))&amp;#10;    distract_img.image = setImage(l[index])&amp;#10;    &amp;#10;if congruency == &quot;congruent&quot;:&amp;#10;    if identity == &quot;pop&quot;:&amp;#10;        setDist(popstars)&amp;#10;    else:&amp;#10;        setDist(politicians)&amp;#10;  &amp;#10;        &amp;#10;else:&amp;#10;    if identity == &quot;pop&quot;:&amp;#10;        setDist(politicians)&amp;#10;    else:&amp;#10;        setDist(popstars)&amp;#10;&amp;#10;&amp;#10;direction = randint(low = 0, high = 2)&amp;#10;&amp;#10;if direction == 0:&amp;#10;    distract_img.pos = (-0.3,0)&amp;#10;else:&amp;#10;    distract_img.pos = (0.3,0)&amp;#10;    &amp;#10; #Testing&amp;#10;text.text = load&amp;#10;            " valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin Routine" updates="constant" val="target = randint(low = 0, high = load)&amp;#10;png = &quot;&quot;&amp;#10;stockSet = set()&amp;#10;images = [&amp;#10;image1,&amp;#10;image2,&amp;#10;image3,&amp;#10;image4,&amp;#10;image5,&amp;#10;image6,&amp;#10;image7,&amp;#10;image8&amp;#10;]&amp;#10;&amp;#10;# if it is a popstar&amp;#10;if (identity == &quot;pop&quot;):&amp;#10;    index = randint(low = 0, high = len(popstars) )&amp;#10;    png = popstars[index]&amp;#10;    &amp;#10;# if it is a politician&amp;#10;else:&amp;#10;    index = randint(low = 0, high = len(politicians) )&amp;#10;    png = politicians[index]&amp;#10;&amp;#10;def pos (index):&amp;#10;    return index * 0.1&amp;#10;&amp;#10;&amp;#10;def setImage (file):&amp;#10;    return &quot;images/&quot; + file&amp;#10;    &amp;#10;anchor = anchor_dict[load]&amp;#10;&amp;#10;&amp;#10;#loops through load from 0, 1 ... load &amp;#10;for i in range(load):&amp;#10;    cImage = images[i]&amp;#10;    cImage.pos = (0, anchor - pos(i))&amp;#10;  &amp;#10;    &amp;#10;    if i == target:&amp;#10;        cImage.image = setImage(png)&amp;#10;    else:&amp;#10;        index = randint(low = 0, high = len(stock))&amp;#10;        while stock[index] in stockSet:&amp;#10;            index = randint(low = 0, high = len(stock))&amp;#10;            &amp;#10;        stockSet.add(stock[index])&amp;#10;        cImage.image = setImage(stock[index])&amp;#10;&amp;#10;        &amp;#10;if distractor == &quot;inv&quot;:&amp;#10;    distract_img.ori = 180&amp;#10;&amp;#10;def setDist (l):&amp;#10;    index = randint(low = 0, high = len(l))&amp;#10;    &amp;#10;    while l[index] == png:&amp;#10;        index = randint(low = 0, high = len(l))&amp;#10;    distract_img.image = setImage(l[index])&amp;#10;    &amp;#10;if congruency == &quot;congruent&quot;:&amp;#10;    if identity == &quot;pop&quot;:&amp;#10;        setDist(popstars)&amp;#10;    else:&amp;#10;        setDist(politicians)&amp;#10;  &amp;#10;        &amp;#10;else:&amp;#10;    if identity == &quot;pop&quot;:&amp;#10;        setDist(politicians)&amp;#10;    else:&amp;#10;        setDist(popstars)&amp;#10;&amp;#10;&amp;#10;direction = randint(low = 0, high = 2)&amp;#10;&amp;#10;if direction == 0:&amp;#10;    distract_img.pos = (-0.3,0)&amp;#10;else:&amp;#10;    distract_img.pos = (0.3,0)&amp;#10;    &amp;#10;&amp;#10;            " valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -444,11 +420,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-<<<<<<< Updated upstream
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-=======
-        <Param name="letterHeight" updates="constant" val="0.001" valType="code"/>
->>>>>>> Stashed changes
         <Param name="name" updates="None" val="instrText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -460,7 +432,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="On each trial, you will see a set of faces in the middle of the screen.&amp;#10;One (1) of these faces will either be a POLITICIAN or a POP STAR.&amp;#10;&amp;#10;If the face is a POLITICIAN, press the F key.&amp;#10;If the face is a POP STAR, press the K key.&amp;#10;&amp;#10;You will see another face to the side of the main set.&amp;#10;Please IGNORE this face as best as you can.&amp;#10;&amp;#10;At all times, please:&amp;#10;- Keep your eyes fixed on the cross (+) at the center of the screen.&amp;#10;- Respond as quickly and accurately as you can.&amp;#10;&amp;#10;Press the SPACE key to begin the experiment." valType="str"/>
+        <Param name="text" updates="constant" val="On each trial, you will see a set of faces in the middle of the screen.&amp;#10;One (1) of these faces will either be a POLITICIAN or a POP STAR.&amp;#10;&amp;#10;If the face is a POLITICIAN, press the F key.&amp;#10;If the face is a POP STAR, press the K key.&amp;#10;&amp;#10;You will also see a face o one side of the set.&amp;#10;Please ignore this face as best as you can.&amp;#10;&amp;#10;At all times, please:&amp;#10;- Keep your eyes fixed on the cross (+) at the center of the screen.&amp;#10;- Respond as quickly and accurately as you can.&amp;#10;&amp;#10;Press the SPACE key to begin the experiment." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
